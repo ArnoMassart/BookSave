@@ -1,38 +1,30 @@
 package edu.ap.booksave.components.book
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
-
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
 import androidx.compose.material.icons.filled.Remove
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import edu.ap.booksave.R
 import edu.ap.booksave.models.book.Book
 import edu.ap.booksave.pages.ui.theme.LightestGray
-import edu.ap.booksave.pages.ui.theme.titleStyle
 
 @Composable
 fun BookPageItem(book: Book, onRemoveBook: (Book) -> Unit,    onToggleRead: () -> Unit
@@ -67,7 +59,7 @@ fun BookPageItem(book: Book, onRemoveBook: (Book) -> Unit,    onToggleRead: () -
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = book.title ?: "No title",
+                    text = book.title ?: stringResource(R.string.book_no_title),
                     style = MaterialTheme.typography.titleMedium,
                     color = Color.Black,
                     maxLines = 2,
@@ -75,7 +67,7 @@ fun BookPageItem(book: Book, onRemoveBook: (Book) -> Unit,    onToggleRead: () -
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Authors: ${book.authors?.joinToString(", ") ?: "Unknown"}",
+                    text = stringResource(R.string.book_authors, book.authors?.joinToString(", ") ?: stringResource(R.string.unknown)),
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color.DarkGray
                 )
@@ -90,7 +82,7 @@ fun BookPageItem(book: Book, onRemoveBook: (Book) -> Unit,    onToggleRead: () -
                 IconButton(onClick = onToggleRead) {
                     Icon(
                         imageVector = if (book.read) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
-                        contentDescription = if (book.read) "Mark as unread" else "Mark as read"
+                        contentDescription = if (book.read) stringResource(R.string.book_mark_unread) else stringResource(R.string.book_mark_read)
                     )
                 }
             }

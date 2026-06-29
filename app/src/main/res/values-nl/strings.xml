@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">BookSave</string>
+    <string name="nav_books">Boeken</string>
+    <string name="nav_search">Zoeken</string>
+    <string name="nav_settings">Instellingen</string>
+    
+    <string name="tab_unread">Ongelezen</string>
+    <string name="tab_read">Gelezen</string>
+    
+    <string name="dialog_remove_title">Boek verwijderen</string>
+    <string name="dialog_remove_message">Weet je zeker dat je \'%1$s\' wilt verwijderen uit je lijst?</string>
+    <string name="dialog_remove_confirm">Verwijderen</string>
+    <string name="dialog_remove_cancel">Annuleren</string>
+    
+    <string name="empty_book_list">Geen boeken in deze lijst.</string>
+    <string name="search_placeholder">Zoek boeken</string>
+    <string name="loading_books">Boeken ophalen...</string>
+    <string name="no_books_found">Geen boeken gevonden!</string>
+    <string name="add_author">Toevoegen</string>
+    
+    <string name="settings_title">Instellingen</string>
+    <string name="settings_export">Boeken Exporteren</string>
+    <string name="settings_import">Boeken Importeren</string>
+    <string name="settings_language">Taal</string>
+    
+    <string name="toast_export_success">Succesvol geëxporteerd!</string>
+    <string name="toast_export_failed">Exporteren mislukt: %1$s</string>
+    <string name="toast_import_success">Succesvol geïmporteerd!</string>
+    <string name="toast_import_failed">Importeren mislukt: %1$s</string>
+</resources>

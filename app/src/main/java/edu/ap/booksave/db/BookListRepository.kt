@@ -43,6 +43,13 @@ object BookListDataStoreManager {
         }
     }
 
+    suspend fun replaceBookList(context: Context, books: List<Book>) {
+        context.bookListDataStore.edit { preferences ->
+            val jsonSet = books.map { gson.toJson(it) }.toSet()
+            preferences[BOOK_LIST_KEY] = jsonSet
+        }
+    }
+
     suspend fun markBookAsRead(context: Context, book: Book) {
         val updatedBook = book.copy(read = true)
         updateBook(context, updatedBook)
@@ -75,4 +82,3 @@ object BookListDataStoreManager {
         }
     }
 }
-

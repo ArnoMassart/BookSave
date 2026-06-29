@@ -8,7 +8,8 @@ interface BooksApi {
     @GET("volumes")
     suspend fun searchBooks(
         @Query("q") query: String,
-        @Query("maxResults") maxResults: Int = 40,
+        @Query("startIndex") startIndex: Int = 0,
+        @Query("maxResults") maxResults: Int = 20,
         @Query("langRestrict") language: String = "nl",
         @Query("key") apiKey: String = "AIzaSyB6ARw8a-YLX_JMQe2ekKXVqvI0eQMekL0"
     ): BookResponse

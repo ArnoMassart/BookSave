@@ -25,7 +25,12 @@
         <activity
             android:name=".pages.SearchPage"
             android:exported="false"
-            android:label="@string/title_activity_search_page"
+            android:label="@string/nav_search"
+            android:theme="@style/Theme.BookSave" />
+        <activity
+            android:name=".pages.SettingsPage"
+            android:exported="false"
+            android:label="@string/nav_settings"
             android:theme="@style/Theme.BookSave" />
     </application>
 
