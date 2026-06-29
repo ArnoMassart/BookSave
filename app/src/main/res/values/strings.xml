@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BookSave</string>
+    <string name="title_activity_bottom_nav_bar">BottomNavBar</string>
+    <string name="title_activity_search_page">SearchPage</string>
+    <string name="title_activity_book_page">BookPage</string>
+    <string name="title_activity_book_list">BookList</string>
+</resources>

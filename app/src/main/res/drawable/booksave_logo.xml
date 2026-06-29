@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="152dp"
+    android:height="160dp"
+    android:viewportWidth="152"
+    android:viewportHeight="160">
+
+   <group
+       android:scaleX="1.4"
+       android:scaleY="1.4"
+       android:translateY="35"
+       android:translateX="30"
+       >
+       <path
+           android:fillColor="#FF000000"
+           android:pathData="M8,8 h48 a4,4 0 0 1 4,4 v40 a4,4 0 0 1 -4,4 h-48 a4,4 0 0 1 -4,-4 v-40 a4,4 0 0 1 4,-4 z
+                          M12,12 v40 h40 v-40 z" />
+
+       <!-- Book inside the safe -->
+       <path
+           android:fillColor="#FF000000"
+           android:pathData="M22,22 h20 v20 h-20 z
+                          M24,24 v16 h16 v-16 z" />
+
+       <!-- Dial (safe knob) -->
+       <path
+           android:fillColor="#FF000000"
+           android:pathData="M50,32
+                          a6,6 0 1,0 0.01,0 z
+                          M50,26 v-4
+                          M50,38 v4
+                          M44,32 h-4
+                          M56,32 h4" />
+   </group>
+
+</vector>
