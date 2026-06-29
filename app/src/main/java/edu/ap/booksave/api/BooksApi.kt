@@ -10,6 +10,6 @@ interface BooksApi {
         @Query("q") query: String,
         @Query("maxResults") maxResults: Int = 40,
         @Query("langRestrict") language: String = "nl",
-        @Query("key") apiKey: String = "AIzaSyB6ARw8a-YLX_JMQe2ekKXVqvI0eQMekL0"
+        @Query("key") apiKey: String = "API_KEY"
     ): BookResponse
 }
